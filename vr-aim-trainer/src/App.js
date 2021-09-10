@@ -1,11 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 
+// import components
+import Navbar from 'react-bootstrap/Navbar';
+
+
 function App() {
   return (
-    <div className="App">
-      <p>Yo yo yo</p>
-    </div>
+   <Container />
+    <p>hello there</p>
+   </Container>
   );
 }
 
