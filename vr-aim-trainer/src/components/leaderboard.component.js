@@ -1,7 +1,6 @@
 
 import React, { Component } from 'react';
 import {Button, Modal} from 'react-bootstrap';
-import AsyncCreatableSelect from 'react-select/async-creatable';
 import axios from 'axios';
 
 
@@ -36,12 +35,14 @@ export default class Leaderboard extends Component {
             {
                 points: 100,
                 name: "Txato",
-                date: "June 12, 1900"
+                date: "June 12, 1900",
+                id: 1
             },
             {
                 points: 80,
                 name: "Joxe",
-                date: "July 13, 1830"
+                date: "July 13, 1830",
+                id: 2
             }
         ]
         this.setState({
