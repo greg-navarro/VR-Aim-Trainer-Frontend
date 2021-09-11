@@ -16,12 +16,7 @@ function App() {
       <Navbar>
         <Container fluid>
           <Navbar.Brand href="#home">VR Aim Trainer</Navbar.Brand>
-      
-          <Navbar.Collapse className="justify-content-end">
-            <Navbar.Text>
-              Signed in as: <a href="#login">Mark Otto</a>
-            </Navbar.Text>
-          </Navbar.Collapse>
+          
         </Container>
       </Navbar>
         <p>Yo yo yo</p>
