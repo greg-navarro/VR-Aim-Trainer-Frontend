@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
+import NavbarComp from "./components/navbarcomp.component";
 // import components
 // import Navbar from './components/navbar.component';
 
@@ -13,12 +14,7 @@ function App() {
   return (
     <Router>
       <div className="container-fluid">
-      <Navbar>
-        <Container fluid>
-          <Navbar.Brand href="#home">VR Aim Trainer</Navbar.Brand>
-          
-        </Container>
-      </Navbar>
+      <NavbarComp />
         <p>Yo yo yo</p>
       </div>
     </Router>
