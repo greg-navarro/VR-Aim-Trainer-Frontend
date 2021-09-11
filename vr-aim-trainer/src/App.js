@@ -14,8 +14,7 @@ function App() {
   return (
     <Router>
       <div className="container-fluid">
-      <NavbarComp />
-        <p>Yo yo yo</p>
+        <NavbarComp />
       </div>
     </Router>
   );
