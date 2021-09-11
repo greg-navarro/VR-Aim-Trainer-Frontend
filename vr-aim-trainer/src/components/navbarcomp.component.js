@@ -13,12 +13,12 @@ export default class NavbarComp extends Component {
 		return (
 			<Navbar bg="dark" variant="dark">
 				<Container fluid>
-				<Navbar.Brand href="#home">VR Aim Trainer</Navbar.Brand>
+				<Navbar.Brand href="/">VR Aim Trainer</Navbar.Brand>
 				<Nav className="me-auto">
-					<Nav.Link href="#home">Home</Nav.Link>
-					<Nav.Link href="#leaderboard">Leaderboard</Nav.Link>
-					<Nav.Link href="#about">About</Nav.Link>
-					<Nav.Link href="#contact">Contact</Nav.Link>
+					<Nav.Link href="/">Home</Nav.Link>
+					<Nav.Link href="leaderboard">Leaderboard</Nav.Link>
+					<Nav.Link href="about">About</Nav.Link>
+					<Nav.Link href="contact">Contact</Nav.Link>
 				</Nav>
 				</Container>
 			</Navbar>
