@@ -1,4 +1,4 @@
-import {BrowserRouter as Router} from "react-router-dom";
+import {BrowserRouter as Router, Route} from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -15,7 +15,7 @@ function App() {
       <div className="container-fluid">
       <Navbar>
         <Container fluid>
-          <Navbar.Brand href="#home">Navbar with text</Navbar.Brand>
+          <Navbar.Brand href="#home">VR Aim Trainer</Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
