@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import NavbarComp from "./components/navbarcomp.component";
+import Leaderboard from "./components/leaderboard.component";
 // import components
 // import Navbar from './components/navbar.component';
 
@@ -15,7 +16,10 @@ function App() {
     <Router>
       <div className="container-fluid">
         <NavbarComp />
+        <br />
+        <Route path="/leaderboard" component={Leaderboard} />
       </div>
+     
     </Router>
   );
 }
