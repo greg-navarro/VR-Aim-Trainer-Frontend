@@ -8,8 +8,8 @@ import Navbar from "react-bootstrap/Navbar";
 import NavbarComp from "./components/navbarcomp.component";
 import Leaderboard from "./components/leaderboard.component";
 import Home from "./components/home.component";
-// import components
-// import Navbar from './components/navbar.component';
+import About from "./components/about.component";
+import Contact from "./components/contact.component";
 
 
 function App() {
@@ -20,6 +20,8 @@ function App() {
         <br />
         <Route path="/" exact component={Home} />  
         <Route path="/leaderboard" component={Leaderboard} />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
       </div>
      
     </Router>
