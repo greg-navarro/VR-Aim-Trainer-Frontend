@@ -1,6 +1,5 @@
 
 import React, { Component } from 'react';
-import {Button, Modal} from 'react-bootstrap';
 import axios from 'axios';
 
 
@@ -43,6 +42,12 @@ export default class Leaderboard extends Component {
                 name: "Joxe",
                 date: "July 13, 1830",
                 id: 2
+            },
+            {
+                points: 80,
+                name: "Moonboy",
+                date: "July 20, 1832",
+                id: 3
             }
         ]
         this.setState({
