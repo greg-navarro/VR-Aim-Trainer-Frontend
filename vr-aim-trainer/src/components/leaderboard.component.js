@@ -8,6 +8,7 @@ const Score = props => (
         <td>#{props.i + 1}</td>
         <td>{props.score.points}</td>
         <td>{props.score.userID}</td>
+        <td>{props.score.gameMode}</td>
         <td>{props.score.date}</td>
     </tr>
 )
@@ -68,6 +69,7 @@ export default class Leaderboard extends Component {
                             <th>Rank</th>
                             <th>Score</th>
                             <th>Name</th>
+                            <th>Game Mode</th>
                             <th>Date</th>
                         </tr>
                     </thead>
