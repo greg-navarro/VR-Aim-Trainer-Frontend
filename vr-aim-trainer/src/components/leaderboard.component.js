@@ -5,9 +5,9 @@ import axios from 'axios';
 
 const Score = props => (
     <tr>
-        <td>#{props.i}</td>
+        <td>#{props.i + 1}</td>
         <td>{props.score.points}</td>
-        <td>{props.score.name}</td>
+        <td>{props.score.userID}</td>
         <td>{props.score.date}</td>
     </tr>
 )
@@ -28,41 +28,14 @@ export default class Leaderboard extends Component {
     }
 
     componentDidMount() {
-        // Insert test scores
-        let testScores = [
-            {
-                points: 100,
-                name: "Txato",
-                date: "June 12, 1900",
-                id: 1
-            },
-            {
-                points: 80,
-                name: "Joxe",
-                date: "July 13, 1830",
-                id: 2
-            },
-            {
-                points: 80,
-                name: "Moonboy",
-                date: "July 20, 1832",
-                id: 3
-            }
-        ]
-
-        console.log("Retrieve scores from the db here!"); // TODO get scores
-
-        let highScores = undefined
+        console.log("Retrieve scores from the db here!"); 
         axios.get("http://localhost:3456/scores?topScores=2")
-            .then(function (response) {
-                console.log(response)
-                highScores = response.data
-            }).catch(function (error) {
-                console.log("ERROR line 92: " + error)
+            .then((response) => {
+                this.setState({scores: response.data})
+                console.log("SUCESS", response.data)
+            }).catch((error) => {
+                console.log("ERROR retrieving top scores: " + error)
             });
-
-        this.setState({scores: highScores})
-        
     }
 
 
@@ -76,7 +49,7 @@ export default class Leaderboard extends Component {
         for (let i = 0; i < this.state.scores.length; i++) {
             const currentScore = this.state.scores[i];
             scoresElements.push(
-                <Score score={currentScore} i={i} key={currentScore.id.toString()}/>
+                <Score score={currentScore} i={i} key={currentScore._id}/>
             )
         }
         console.log(scoresElements); // TODO remove
