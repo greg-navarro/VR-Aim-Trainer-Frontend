@@ -53,7 +53,6 @@ export default class Leaderboard extends Component {
                 <Score score={currentScore} i={i} key={currentScore._id}/>
             )
         }
-        console.log(scoresElements); // TODO remove
         return scoresElements
     }
 
