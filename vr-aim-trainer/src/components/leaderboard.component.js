@@ -28,16 +28,6 @@ export default class Leaderboard extends Component {
     }
 
     componentDidMount() {
-        console.log("Retrieve scores from the db here!"); // TODO get scores
-
-        let highScores = undefined
-        axios.get("http://localhost:3456/scores?topScores=2")
-            .then(function (response) {
-                console.log(response)
-            }).catch(function (error) {
-                console.log("ERROR line 92: " + error)
-            });
-
         // Insert test scores
         let testScores = [
             {
@@ -59,9 +49,20 @@ export default class Leaderboard extends Component {
                 id: 3
             }
         ]
-        this.setState({
-            scores: testScores
-        });
+
+        console.log("Retrieve scores from the db here!"); // TODO get scores
+
+        let highScores = undefined
+        axios.get("http://localhost:3456/scores?topScores=2")
+            .then(function (response) {
+                console.log(response)
+                highScores = response.data
+            }).catch(function (error) {
+                console.log("ERROR line 92: " + error)
+            });
+
+        this.setState({scores: highScores})
+        
     }
 
 
