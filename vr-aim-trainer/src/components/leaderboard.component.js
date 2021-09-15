@@ -31,20 +31,9 @@ export default class Leaderboard extends Component {
         console.log("Retrieve scores from the db here!"); // TODO get scores
 
         let highScores = undefined
-        const options = {
-            params: {'name': ''}
-        }
-        axios.get('localhost', options)
+        axios.get("http://localhost:3456/scores?topScores=2")
             .then(function (response) {
-                highScores = response.data;
-                console.log("We have " + highScores.length + " options")
-                let newOptions = [];
-                highScores.forEach(element => {
-                    const newElement = {label: element.name, value: element.caloriesPerGram};
-                    newOptions.push(newElement)
-                    console.log(newElement)
-                });
-                
+                console.log(response)
             }).catch(function (error) {
                 console.log("ERROR line 92: " + error)
             });
