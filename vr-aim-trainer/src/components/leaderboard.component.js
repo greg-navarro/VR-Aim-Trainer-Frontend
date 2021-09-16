@@ -7,7 +7,7 @@ const Score = props => (
     <tr>
         <td>#{props.i + 1}</td>
         <td>{props.score.points}</td>
-        <td>{props.score.userID}</td>
+        <td>{props.score.userName}</td>
         <td>{props.score.gameMode}</td>
         <td>{props.score.date}</td>
     </tr>
