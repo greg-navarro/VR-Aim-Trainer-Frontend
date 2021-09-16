@@ -30,7 +30,7 @@ export default class Leaderboard extends Component {
 
     componentDidMount() {
         console.log("Retrieve scores from the db here!"); 
-        axios.get("http://localhost:3456/scores?topScores=2")
+        axios.get("http://localhost:3456/scores?topScores=5")
             .then((response) => {
                 this.setState({scores: response.data})
                 console.log("SUCESS", response.data)
